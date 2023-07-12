@@ -1,85 +1,1232 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/mimino-team-project/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    
-    <script type="module" crossorigin src="/mimino-team-project/assets/index-c45ada6b.js"></script>
-    <link rel="stylesheet" href="/mimino-team-project/assets/index-10c40100.css">
-  </head>
-  <body>
-    <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIMINO</title>
+     <link rel="website icon" href="./favicon.ico" type="ico">
+     <link rel="apple-touch-icon" sizes="57x57" href="data:image/png;base64,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">
+     <link rel="apple-touch-icon" sizes="60x60" href="data:image/png;base64,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">
+     <link rel="apple-touch-icon" sizes="72x72" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAACmlBMVEVko/JlpPNjovFQj+BIiNhIiNlamellpPJene1KidpPjt9hoO8kZLcNTqIOT6M6eMlmpPNGhdYPUKQiYbVgn+4hYbQMTaElZLcycMMMTKEfX7Jfnu0NTaIVVqpWluYfXrIdXbBenewdXbFFhNZRkOESU6cbW65dm+tdnOsbW68xcMI+fc8NTaEZWaxbmukZWa0fXrFjofAqabsYWKtamegRUqUUVagSUqVQkN8QUaUMTaIWVqpYl+dYl+YYV6ooaLo9fc5lpPRKidsqa74UVKkVValXleYZWKs+fc4RUKQpaLs1dccTU6ZAf9EVVKkUVKhVlORVk+QYV6tPjt4aWq0ZWKxamOgiYrUgX7JOjd4VU6gTU6dTkuJSkeITUqYra74PUKNJidpVk+MVVKgzc8VVlOUUU6gSUqZRj+BQj98RUaUZV6tbmupBgdE0dMdCgtIOTqIPT6NJiNlOjd0QUKRUlOMiYrRgn+8tbcBWleVMi9xMi9sQT6MjYrVUk+QcXK9WleQVVKdKiNkaWaw3dshCgdJmpfRIh9hmpfNHhtcPTqItbb9jovI6essWVahGhdVFg9QbWq1cm+pcm+tiofAmZrkhYLNfnu5XleVDgtNCgNEOTaEubb9ZmOgWV6oMTqI1dMVXluVBf9A/fs4cW65DgtQ7esxIh9cOT6JXluY9e8wVVqklZbkwb8EZWq1amepYluYWVqk8e8s6ecsNTKEdXK8kZLgUVaksa7wXVqk4eck3dsldnOxBgNE2dsgzdMYeXbBPjd5Uk+Mzc8YwccNZmOcXVqoubsELTKEeXrFfne0wcMILTaErbL4oaLsKS58LS6ARUqYeXbFcmuoLTKBAf9AvbsEwb8IwbsJQkOA2dccvbsJko/P///9nRbyXAAAAAWJLR0TdcGezIQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+cCFgkFMetfFUkAAAL6SURBVFjD7db3V9NQFAfwvICUikHFGg1DQWUJVBAcZSkqQxxFZYiKeyJqKzgABypWnKi4994bF4qKCIIDcEFdf4zvvjSpnuMP91eP+f6Q5tzwPrybpO+V47Ro0aJFyz8d4sxfq1iHd3Ht5IibTq266x011848EvLoInjKEbqq/71bdy+l2MOAhAw9RUGO2MtDrfaWlKK3DxLy8VYgX78+ypTc+6q6fwASCuinjBE8+zsgMiBQqYlBwUgoJFSFxIGOGgkLV2sRRh3K0RkHOaFIRxtRg5216BgkFBMNg4YMhVHDhrPeiFsE1PxM9BAbF497k0hCXCy9z4kjYKg4MonVRnkBO3oMHJNTkFBKMjyw1LSxAKVHsVmOA3X8hIkAmTOQ0CQzQJOnZNLBYlY2jDLkwPnU3GkATZ+BhPJmApQYPwtmMXsOHUXmzoPZzV+wEKBFi5HQknz61+FLC5axZ7ScjkpaYaGn1pUprLX8XCRUWARAqnEVtCiuXkNra6Gz1JhimJhQVIKEStcBkGX0WA+9mTcQLngjQOl82SaArHoktNkK0BYjKQfIspWQQmhWCLOVsRlZt1WgoIrtOxhUYCuB90/cuYvspi+WEJhnK94DkKUSCe2FOyvu20+qgqCj0KoDB+Hz0GFyRIaOIls7dlyGOO4ErEGm3JOnTtPCGR05y6Dwc0joPHzRxQvBHLnIXoBLl6/QDy89IVdlKA0JXZOhEI4UX6c3R7xxEzq7dZuQO3cZdA8JVd8H6EEIXb0fwnMLfEQP0mOefp1r2BSfIKGnEoNqwVRXId9nBCBfuPQcCb1gUB1d0sjLfAUy11MonkHSK+TO1qBCXK2/Y0piDt2DSONrBjXgHK6pGUa+eQvn7xSoHBaBxkSA3jchoRYGRcLuRSotMlRU6oSaW3AO39omSdKHOgYlZJo+0pg+faYLPsmu+UIvtbXi9my+vcNu/9pRzTZZvt7lG41LBhsb8P2H3W7vaMdu/txPGuUZ/vkL5LcrWrRo0aLlv88v0bO7GG7wvR0AAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDItMjJUMDk6MDU6NDQrMDA6MDADdZOiAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAyLTIyVDA5OjA1OjQ0KzAwOjAwcigrHgAAACB0RVh0c29mdHdhcmUAaHR0cHM6Ly9pbWFnZW1hZ2ljay5vcme8zx2dAAAAGHRFWHRUaHVtYjo6RG9jdW1lbnQ6OlBhZ2VzADGn/7svAAAAGHRFWHRUaHVtYjo6SW1hZ2U6OkhlaWdodAAxOTJAXXFVAAAAF3RFWHRUaHVtYjo6SW1hZ2U6OldpZHRoADE5MtOsIQgAAAAZdEVYdFRodW1iOjpNaW1ldHlwZQBpbWFnZS9wbmc/slZOAAAAF3RFWHRUaHVtYjo6TVRpbWUAMTY3NzA1Njc0NEaoj8AAAAAPdEVYdFRodW1iOjpTaXplADBCQpSiPuwAAABWdEVYdFRodW1iOjpVUkkAZmlsZTovLy9tbnRsb2cvZmF2aWNvbnMvMjAyMy0wMi0yMi8xMWI0M2E0ODk2OTQyZmUyM2Y2MGI4ZDlmNzVhNzZkMC5pY28ucG5necqZCwAAAABJRU5ErkJggg==">
+     <link rel="apple-touch-icon" sizes="76x76" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABMCAMAAADwSaEZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAC5VBMVEVko/JlpPJlpPNbmupVlORVleVXluZiofBkovJZmOhVleRamukxcMMTU6cUVakUVagZWa1TkuJcm+ogYbQTVKgTVKcubsFjovEqabwLTKANTqIMTqINTaFAf9BNjN0QUKQMTaEnZrljofAoZ7oMTKEra706eMslZbhioe8mZbgaWq5hoPAjYrVhoO5hoO8jY7ZMi9xXlucWVqogYLNgn+1gn+4hYLQ4d8lGhdYOTqIeXrFfnuwfXrEPUKQlY7YycMIdXK9dnOtenOsdXa8fX7EQUaUNTaIVValWleVene0eX7ISU6ceX7MMTaIbW65cm+sxcMEaWq0OT6NEhNVlpPRRkOEfX7ItbcAMTKIaWa0NTKE6ecota70wb8E+fc80csQ1c8YYWKtamOkYV6s+fM1CgNIeXbBenexjofEqaLwPT6NJiNg2dcdYl+c+fc4RUqZPj+BamegaWawYWKxamek2dchWlOUVVKg+fM5hofAhYrU8fM1KidoMTKApaboUU6dUk+NmpfQ2dscoaLpiofE1dcc/fc5npvQTUqZSkeESUqY/fs5npvVMi9siYrU3dsYSUaVRj99Qj99Afs8QT6NVk+Nfnu1mpfM4dscRUaVPjd5Ojd0RUKRjovItbb80dMVCgtMNTqM0dMc4d8dLitpBgNAhYbQtbsAPUKNJido4d8hKidlJh9hCgdFWleQWValdnOwcXK9bmek5eMgPTqJIhtZGhdUOTaFDgdIkZLdCgdJQjt4RUaQrar05eMlFhNREgtMOTaJDgtI5eMpAgNI6eMlBgNFNjd0YWawdXrEUVKdAgM8+ftBEg9RcnOscXLA7eco9fc47e803dsllpfM7eso6e8w4eMpGhNYOT6I7ess3eMo1dcgWV6oaW65bm+o8essyc8ULTKFHhtYmZrgtbL88e8sLTaFkpPMvcMJHhtc8e8xDgdM9e8wwcMIcXbA9fM0NTKBCgdNDgtNdnexenu3///8LD9m1AAAAAWJLR0T23NtKYQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+cCFgkFMetfFUkAAANESURBVFjD7ZZpWExRGMfvnEkjjD1jppsuhlBCRCP7MiRTltGoZF+LUIiILsIgQlyyZd/3hGyVfd/3NWuyb9/d952N5+l5nD54fLn/D3PP/M/z/p73fc+551yGkSRJkiRJkv6ZZMSu321StP0XyZ1KWOWscLglXWx2qdLFgJVRlrWoXPkK9iRkFStVttquVVTULFVVtcYiN9bdDiPVPDirra6uoIbVqGmL0mhr2XMgtVmby3nWoYYp6tphXD25zOp6eWrtrnd9aphPAztM49HQWidp5OtmhzVuQg3za+qAcc1sMH+dw2weQA0LaIGwlhjXysfqttY6zDZtqWHt2gNM16Gj+Kvv1NmSWmAXMIO6GgAWHCKjZMlCgiGO7dYdHj16GrHKXkFACTX1hkeYnPYdIPIwoIRH9IHCuEiL2RdS0vbrj96AgdQwl0EIGzxED4FDh4E5fAR4UdEjEeY7ihrm7IuwGCdX6PboMWIgGRsrelzcuPG4DLZGUsAmxEMAO3FSAkC5yWLTjFOixGHiVMYCm5ZEDUtSIiyGn441zZgpesm4JrNmY5maOWZqmHkuwubNT/EAWJwLYfwWAExp5hcmwlzqImrY4lSELeHluEfSoglZGo9v0TJhOcJWpFPDVq5CmDu/eg02bS0hGetgsJ4hG7BMjxRq2MY0hG0SjBnwPnKb/ZgtwNi6jZDt4TAXtYMatjMKYbsEsnsPjJRJe/fBxojdLyMHMLPMg9SwrEwIOHSYZ7yOQJ367KPHIMPjKoacQJjuJE8J43NyEZZHGOMpgGlNEXjInuYZcgbLzM2jhp1FWG4OYcg5ODkM5y8A86K4U0kEwthLtDDhsh5LuSL25eo1xwnu7Se24DrmyN0w0vbspsHSF2hypAN2S/x/+w7CDHepF+CeBZYliMH3H/xxGwgPsUzDI2rYY8xG58/DCfLEmprh6TNowXOEccnUsPwXCHsJTVa8sl5w2te4OG+wzLf5tLCCd3ih6woBRt4ncij2A8TzHxGm/lRACWNMaj3LsrpCAWDm0M+oBDwP+S9fxTm92kTLYtKzv4n67oKlqAJ/oH7idwJxwrnsdGoYEXhRQpG3mcwyV5wPNEmSJEmSJOk/6hfFefuiQznqsAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wMi0yMlQwOTowNTo0NCswMDowMAN1k6IAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDItMjJUMDk6MDU6NDQrMDA6MDByKCseAAAAIHRFWHRzb2Z0d2FyZQBodHRwczovL2ltYWdlbWFnaWNrLm9yZ7zPHZ0AAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADE5MkBdcVUAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMTky06whCAAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNjc3MDU2NzQ0RqiPwAAAAA90RVh0VGh1bWI6OlNpemUAMEJClKI+7AAAAFZ0RVh0VGh1bWI6OlVSSQBmaWxlOi8vL21udGxvZy9mYXZpY29ucy8yMDIzLTAyLTIyLzExYjQzYTQ4OTY5NDJmZTIzZjYwYjhkOWY3NWE3NmQwLmljby5wbmd5ypkLAAAAAElFTkSuQmCC">
+     <link rel="apple-touch-icon" sizes="114x114" href="data:image/png;base64,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PZEKVIKgMA0hAMNhhv/893/aLbNqWEH6oprzxf2N8kiGuEWLZMlGtUkV7Hw5kwxGHA9Qi2p5vnjk3IAwmUwxny+AUy2VzGg1G+j1Ope7RlJ7oSqdIitpiLWoVbB6pe7SN1/ULn4LvW5b22UghMB2u9VeJx4MUK/XT47VbDzKy9hKJa0Iyay6zCUMLODF7sfnVMNQudcSxWrVD3Rf3ARdMEiWlDdz2VHSmkWaVkIOJbqjlkFAksSqG/wCmBm1Wg2Dga52a5hH5gWBm8sjhShuTs4PzUU8MkHM6HW7aN21LluXWPXM6s5XsU6xOAzTjoe3wWqJTk1ecdn8FMxArR5hMOhfIKS6bprGCMNK4XF6VK9smdfXy2JNSGHsWvUW8dTzesEaF1ZDJEl8tTeNb67W+vyljfIPrVGoqLOHRi06L85giXariW6no3Xx5lGr3XckLVpk8Rppogszo9VqotfrneVen9OOWsF5ZgUBAFYbsOwJKc066KjIJAGEYQVpOoBaq8w+arcjKYwyDQs7ALh4W+4NsVdr3Qu19YPjchLywrphteXdu3e4Tz9BmFglM6IoQpzEMAm2pOSnsR4/Qi0Vcn9jQiq31sefPrwHCt5nrNcihGFV6/6YgcGgj59++hGFdXgAYLU7EoYVrXtnZjQaTbx//z2E4IL6vkR8UfR8HejnX2ZW7kyvfpyaIWWvxbskbzzWJ/dbNE5rQ7RYNH/14/Jc8v8y1ieF7L5eruMb/3+tngNeSEfwQjqCF9IRvJCO4IV0BC+kI3ghHcEL6QheSEfwQjqCF9IRvJCO4IV0BC+kI3ghHcEL6QheSEfwQjqCF9IRvJCO4IV0BC+kI3ghHcEL6QheSEfwQjqCF9IRvJCO4IV0BC+kI3ghHcEL6Qi/AoNDpcAKza5fAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTAyLTIyVDA5OjA1OjQ0KzAwOjAwA3WTogAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wMi0yMlQwOTowNTo0NCswMDowMHIoKx4AAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTkyQF1xVQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE2NzcwNTY3NDRGqI/AAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMjMtMDItMjIvMTFiNDNhNDg5Njk0MmZlMjNmNjBiOGQ5Zjc1YTc2ZDAuaWNvLnBuZ3nKmQsAAAAASUVORK5CYII=">
+     <link rel="apple-touch-icon" sizes="120x120" href="data:image/png;base64,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mIFGo4Eg8NXpEgiz2RxPTzNst1skaaqOpESIogj1F/vOMl3XjMG4jeMrlZ9NKnuqwXEchJGvPupJwGq7RTKa5KDnIMX1nuciDAPtnq5TugUXXfHxUZLdHJrbpkT0jSs+9Eq1W5jPl4qqo2xsJ86w2ZwuT7IQ6Ha66PW6r5Yaz4nBt7DIqhQw5/1YmnRxKCLx8T0E2m3Z7Tibnd7XJQLiJMV8sYSqQYgAROEAnueejOs6iAUxdlx9X1b1Ljo7x0W/3idZqzmIolDZRbk/nFbUPVmr1RBFkfJB0dUtnDCsPE3acaYF+GC8Jy6OAh/Nhlu40FVZFDOj3WpjOFD9SoCui3Ygsqr7OSpPk6Bvwc82G17eh9HrddHtdkq5RGbGcDhAq90q7VoPq+iKCVfuos/JFWkfh1+R53kIgqBUDxQRIYxC1BQbGOesq+Ui6x3HYAaU/VDHoucv3/5ds2dapYbnIQh8tfWeEYRv4YRhtRbMDJHpdUig4CAKM2Mw7KN9oXtlAfT6XXS7BT3XR68Fd5TVsve8imbOj45qHRc4vJy4F6PVahb3TCsUBgFcz1NfpNPRIUd0E+eTKnbR5x3+LrKbmuPgPvQv2gFy6w6iMCg+HwzSDMT5Xve7jsHMuQUXXZi/aFhPEARoNLzie74Yx373qNDkDoWWInB81lboW6n6GCw0Dp4RQPmZPi7YpN8fMRWZrCLp/BNCYOgP0Go1CoGQZt8s0XndKm+lSkuVgvdPuQALdVel4PxBUP78I8N1XXz8+B3my1Vhv9bhXcz4+PEjHMfRanWV43VUA8lPTVZvwZUCdojw3X2ETrstTx+cLB7J7g3P8wo8o9yM+Ps/fsFf//Yj9r1bpx6d47+5rlsMl4G7uw5++PF7AKrxAswZup1OiY6Q64h+/W1a6SMmn/D9VKsPoFHBSvpPGnEeJooOy8nvVHXbbOW/NqvbZ1w92K/jKGamfwrxrVX5ZoPV28oCNlwWsOGygA2XBWy4LGDDZQEbLgvYcFnAhssCNlwWsOGygA2XBWy4LGDDZQEbLgvYcFnAhssCNlwWsOGygA2XBWy4LGDDZQEbLgvYcFnAhssCNlwWsOGygA2XBWy4LGDDZQEbLgvYcFnAhssCNlwWsOH6Pyqp/kmb4yoHAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTAyLTIyVDA5OjA1OjQ0KzAwOjAwA3WTogAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wMi0yMlQwOTowNTo0NCswMDowMHIoKx4AAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTkyQF1xVQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE2NzcwNTY3NDRGqI/AAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMjMtMDItMjIvMTFiNDNhNDg5Njk0MmZlMjNmNjBiOGQ5Zjc1YTc2ZDAuaWNvLnBuZ3nKmQsAAAAASUVORK5CYII=">
+     <link rel="apple-touch-icon" sizes="144x144" href="data:image/png;base64,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d1qrlwIiugnhl+lwQqF9o4gQRSEaFklmNlyObgnDMWrfs6KngKqvR7x4KSAAOF9D+LYd92Rwv97ZjPFkjN7dXS32CjMs3Hdcn6vcXxOrGM74gngrIJ1dIrBlrCCLdjWj1+2YalFHAZnAASOOTRWsXXtUQkHmiD+fiwu9FNDTwQplBGS308TMUIFCPJ06LwsMoJEn7pPF8nnzoNZ34Hw/TJawUlCeSFVyhrDYa7pEdKdRiE675WS28KV0aDS0n33K3qNCWsuXxFMBXWYg++s5rx+z+VBN0V8vd+ernQBmKkc14nCCdsvyLKJKfzNPbKBKZGUz8fIyGFsajQamsV3N2Eu3C4IA8TS2P7r3+cPaXel5ebO3AiqdiXdjg9jOBvE0QqvVqCQi1hrdbjev/bKbIYwXZm9EX/9ikceVGd4J6HI28iWVw8Z4vEZ4L5daLmNP7nf5JYIBjMflwwGljO3cz7s4FD7uqXq4G296iXUGBQbB4lwdvmxlmDNRbb5wZpO/89NPf8W2wjG/l+oLm/yiJxSIVP5ONr9jKNz+0Tn/Dh33TkAXL+n7P73DaDjMN7dsOluj3WmX2qIgIvzhD/eoOiiXilXba7udDv7+j78hO2d29ySTkTkY9q0KI78G3gkIyL2kQR+D4QBmeil2Xwh8E7W172gTPX77tYGZ0WgqfPddjNxgK/oFLjMOe5zW6qWAgMvXfWub2HS4zXVf851w80627+P3O3krIEPJndRvAnsD+lvAOy9M+LYQAQlOiIAEJ0RAghMiIMEJEZDghAhIcEIEJDghAhKcEAEJToiABCdEQIITIiDBCRGQ4IQISHBCBCQ4IQISnBABCU6IgAQnRECCEyIgwQkRkOCECEhwQgQkOCECEpwQAQlOiIAEJ0RAghMiIMEJEZDghAhIcEIEJDghAhKcEAEJToiABCdEQIITIiDBCRGQ4IQISHBCBCQ4IQISnPg/F/NlHMf3LVgAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjMtMDItMjJUMDk6MDU6NDQrMDA6MDADdZOiAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIzLTAyLTIyVDA5OjA1OjQ0KzAwOjAwcigrHgAAACB0RVh0c29mdHdhcmUAaHR0cHM6Ly9pbWFnZW1hZ2ljay5vcme8zx2dAAAAGHRFWHRUaHVtYjo6RG9jdW1lbnQ6OlBhZ2VzADGn/7svAAAAGHRFWHRUaHVtYjo6SW1hZ2U6OkhlaWdodAAxOTJAXXFVAAAAF3RFWHRUaHVtYjo6SW1hZ2U6OldpZHRoADE5MtOsIQgAAAAZdEVYdFRodW1iOjpNaW1ldHlwZQBpbWFnZS9wbmc/slZOAAAAF3RFWHRUaHVtYjo6TVRpbWUAMTY3NzA1Njc0NEaoj8AAAAAPdEVYdFRodW1iOjpTaXplADBCQpSiPuwAAABWdEVYdFRodW1iOjpVUkkAZmlsZTovLy9tbnRsb2cvZmF2aWNvbnMvMjAyMy0wMi0yMi8xMWI0M2E0ODk2OTQyZmUyM2Y2MGI4ZDlmNzVhNzZkMC5pY28ucG5necqZCwAAAABJRU5ErkJggg==">
+     <link rel="apple-touch-icon" sizes="152x152" href="/mimino-team-project/assets/apple-icon-152x152-9f52b84a.png">
+     <link rel="apple-touch-icon" sizes="180x180" href="/mimino-team-project/assets/apple-icon-180x180-81a644af.png">
+     <link rel="icon" type="image/png" sizes="192x192"  href="/mimino-team-project/assets/android-icon-192x192-cd1afa2c.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABVlBMVEVko/JlpPNmpfNfnu5FhNVBgNFBgdFAgNFQj99WleVEhNVfnu1Yl+cVVqoMTaEMTqILTKAsbL5jovI2dccLTKEUValXluUUVagNTqIaW65bmulene0fYLMTVKhUk+NTkuITU6cOT6MPT6NHh9dOjd0RUqUSU6cSU6ZSkeFRkOARUqYdXK80dMVmpPM/f9AVVakmZrkRUaUQUaUtbL8jY7ZhoPBjovEtbb8KS6A1dccQUKRNjN1KidoPUKQycsQ5ectVlORamekYWaw6ectLidpHhtczcsRIiNhAf9BJiNlKito7estIh9hFg9QOTqIyccMaWq0wcMIdXbBdnOxDgdIMTKEvb8IbW68eXrEubsBBgNINTaJmpfRBgdI/fs9npfQ7e8w+fs8LTaE6esxDg9Q3dshhoO8xcMIgYbQzc8ViofAUVKhWleZcm+tgn+5enexdnOv///+NzjfMAAAAAWJLR0Rxrwdc4gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+cCFgkFMetfFUkAAAEWSURBVDjL7ZHXVsJAEIZ3IwnEMqySyAiiCaJij70iKBY0SmxYo8aOIaLvfyV6lyyPwHf1nzPflHOGkBZ+qCAI1Bf8tIVEKRz5q8uiJLZ3cP2dXRBl3T2NFFOioPYGZ1A5jgh9CUqS/YCYGuCEQQ11TA9RmhnGERzNcsLYOExobJJOTcOMgbMRTsjMwfwCMxaXlleMVVhb54SNHNvMK2pha5vFipDe4YRdXdnb17F0oOcOTdCPhKBwXFasxAk7LbKzcxPKoaAgXGDFIpfs6prdUBNQCq4Qbu8qln2PDR4eHYAnTggDs+ysxphasB14fuGOfI2n3uj7R7X66dJSreZw70p63hchbr3uEvLtyT9N3k2b5xb//ALjbSYrQJjvVgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMy0wMi0yMlQwOTowNTo0NCswMDowMAN1k6IAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjMtMDItMjJUMDk6MDU6NDQrMDA6MDByKCseAAAAIHRFWHRzb2Z0d2FyZQBodHRwczovL2ltYWdlbWFnaWNrLm9yZ7zPHZ0AAAAYdEVYdFRodW1iOjpEb2N1bWVudDo6UGFnZXMAMaf/uy8AAAAYdEVYdFRodW1iOjpJbWFnZTo6SGVpZ2h0ADE5MkBdcVUAAAAXdEVYdFRodW1iOjpJbWFnZTo6V2lkdGgAMTky06whCAAAABl0RVh0VGh1bWI6Ok1pbWV0eXBlAGltYWdlL3BuZz+yVk4AAAAXdEVYdFRodW1iOjpNVGltZQAxNjc3MDU2NzQ0RqiPwAAAAA90RVh0VGh1bWI6OlNpemUAMEJClKI+7AAAAFZ0RVh0VGh1bWI6OlVSSQBmaWxlOi8vL21udGxvZy9mYXZpY29ucy8yMDIzLTAyLTIyLzExYjQzYTQ4OTY5NDJmZTIzZjYwYjhkOWY3NWE3NmQwLmljby5wbmd5ypkLAAAAAElFTkSuQmCC">
+     <link rel="icon" type="image/png" sizes="96x96" href="data:image/png;base64,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">
+     <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAn1BMVEVko/JlpPNamelPj99VleRjovFWleVameg5eMoPUKMfX7JdnOxfnu0hYbQOT6M4eMk0c8URUaUUVKhSkeEVVqkQUaUzc8Vlo/IwcMIeXrEdXbA7e8w+fs8dXbEtbb8kZLcxccMmZrkycsMjY7Uqar0lZbhHh9cSU6YTU6dIh9gjY7Yub8EsbL5ZmOgjZLYqarxcm+pene1bmuplpPL///93SQNgAAAAAWJLR0Q0qbHp/QAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+cCFgkFMetfFUkAAABtSURBVBjTY2AgDzAyMkIJKGBiZmFlYGNmhyvg4OTi5uHl44cpYRQQFGIWFhEVgwmIS0hKSctIykrAzZCTV5BXVFKWgwuoqKqpa2hqqcD4rNo6unryuvrarDARAwNWQ0NWIwO4FmOw8YzGZPoLADCJByE5lea4AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIzLTAyLTIyVDA5OjA1OjQ0KzAwOjAwA3WTogAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMy0wMi0yMlQwOTowNTo0NCswMDowMHIoKx4AAAAgdEVYdHNvZnR3YXJlAGh0dHBzOi8vaW1hZ2VtYWdpY2sub3JnvM8dnQAAABh0RVh0VGh1bWI6OkRvY3VtZW50OjpQYWdlcwAxp/+7LwAAABh0RVh0VGh1bWI6OkltYWdlOjpIZWlnaHQAMTkyQF1xVQAAABd0RVh0VGh1bWI6OkltYWdlOjpXaWR0aAAxOTLTrCEIAAAAGXRFWHRUaHVtYjo6TWltZXR5cGUAaW1hZ2UvcG5nP7JWTgAAABd0RVh0VGh1bWI6Ok1UaW1lADE2NzcwNTY3NDRGqI/AAAAAD3RFWHRUaHVtYjo6U2l6ZQAwQkKUoj7sAAAAVnRFWHRUaHVtYjo6VVJJAGZpbGU6Ly8vbW50bG9nL2Zhdmljb25zLzIwMjMtMDItMjIvMTFiNDNhNDg5Njk0MmZlMjNmNjBiOGQ5Zjc1YTc2ZDAuaWNvLnBuZ3nKmQsAAAAASUVORK5CYII=">
+     <link rel="manifest" href="data:application/json;base64,ewogIm5hbWUiOiAiQXBwIiwKICJpY29ucyI6IFsKICB7CiAgICJzcmMiOiAiLi9hbmRyb2lkLWljb24tMzZ4MzYucG5nIiwKICAgInNpemVzIjogIjM2eDM2IiwKICAgInR5cGUiOiAiaW1hZ2VcL3BuZyIsCiAgICJkZW5zaXR5IjogIjAuNzUiCiAgfSwKICB7CiAgICJzcmMiOiAiLi9hbmRyb2lkLWljb24tNDh4NDgucG5nIiwKICAgInNpemVzIjogIjQ4eDQ4IiwKICAgInR5cGUiOiAiaW1hZ2VcL3BuZyIsCiAgICJkZW5zaXR5IjogIjEuMCIKICB9LAogIHsKICAgInNyYyI6ICIuL2FuZHJvaWQtaWNvbi03Mng3Mi5wbmciLAogICAic2l6ZXMiOiAiNzJ4NzIiLAogICAidHlwZSI6ICJpbWFnZVwvcG5nIiwKICAgImRlbnNpdHkiOiAiMS41IgogIH0sCiAgewogICAic3JjIjogIi4vYW5kcm9pZC1pY29uLTk2eDk2LnBuZyIsCiAgICJzaXplcyI6ICI5Nng5NiIsCiAgICJ0eXBlIjogImltYWdlXC9wbmciLAogICAiZGVuc2l0eSI6ICIyLjAiCiAgfSwKICB7CiAgICJzcmMiOiAiLi9hbmRyb2lkLWljb24tMTQ0eDE0NC5wbmciLAogICAic2l6ZXMiOiAiMTQ0eDE0NCIsCiAgICJ0eXBlIjogImltYWdlXC9wbmciLAogICAiZGVuc2l0eSI6ICIzLjAiCiAgfSwKICB7CiAgICJzcmMiOiAiLi9hbmRyb2lkLWljb24tMTkyeDE5Mi5wbmciLAogICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICJ0eXBlIjogImltYWdlXC9wbmciLAogICAiZGVuc2l0eSI6ICI0LjAiCiAgfQogXQp9">
+     <meta name="msapplication-TileColor" content="#ffffff">
+     <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png">
+     <meta name="theme-color" content="#ffffff">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
+     
+     
+  <script type="module" crossorigin src="/mimino-team-project/assets/input-mask-597313bf.js"></script>
+  <link rel="stylesheet" href="/mimino-team-project/assets/input-mask-b52636b6.css">
+  <link rel="stylesheet" href="/mimino-team-project/assets/index-f54c7c2d.css">
+</head>
+<body class="body">
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-
-    <section>
-      <h1>Lorem ipsum dolor sit amet.</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="/mimino-team-project/assets/javascript-8dac5379.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <section class="vite-promo">
-  <div class="container">
-    <div class="wrapper">
-      <h2 class="title">
-        <span class="gradient">Vite</span>
-      </h2>
-      <p class="text">Next Generation Frontend Tooling</p>
-      <p class="tagline">
-        Get ready for a development environment that can finally catch up with
-        you.
-      </p>
-
-      <ul class="actions">
-        <li class="action">
-          <a
-            class="link"
-            href="https://vitejs.dev/guide/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Get Started</a
-          >
+     <header class="header" data-header>
+  <div class="container header-container">
+    <button data-menu-open class="header-mobile-menu-btn" type="button">
+      <svg class="header-mobile-menu-icon" width="21" height="21">
+        <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-menu-open"></use>
+      </svg>
+    </button>
+    <nav class="header-nav">
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <a class="header-nav-link current" href="./index.html">home</a>
         </li>
-        <li class="action">
-          <a
-            class="link"
-            href="https://github.com/vitejs/vite"
-            target="_blank"
-            rel="noopener noreferrer"
-            >View on GitHub</a
-          >
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="./hotel.html">hotel</a>
+        </li>
+        <li class="header-nav-item">
+          <a class="header-nav-link" href="./restaurant.html">restaurant</a>
         </li>
       </ul>
-    </div>
+    </nav>
+    <a class="logo" href="./index.html"
+      >mimino <span class="logo-down">restaurant-hotel complex</span>
+    </a>
+    <ul class="header-social-list">
+      <li class="header-social-item">
+        <a href="https://www.instagram.com" target="_blank">
+          <svg class="header-social-list-icon" width="20" height="20">
+            <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="header-social-item">
+        <a href="https://www.facebook.com" target="_blank">
+          <svg class="header-social-list-icon" width="20" height="20">
+            <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="header-social-item">
+        <a href="https://twitter.com/" target="_blank">
+          <svg class="header-social-list-icon" width="22" height="20">
+            <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-    <div class="thumb">
-      <!-- Path to images as from index.html file -->
-      <img
-        class="pic"
-        src="/mimino-team-project/assets/vite-logo-51249ca9.png"
-        alt="Vite logo"
-        width="640"
-        height="640"
-      />
+  
+  <div class=" header-mobile-menu" data-menu>
+    
+    <a class="logo" href="./index.html"
+    >mimino <span class="logo-down">restaurant-hotel complex</span>
+  </a>
+
+  <button
+  data-menu-close
+    type="button"
+    class="header-mobile-menu-btn-close header-modal-close-btn">
+    <svg class="header-modal-close-btn-icon" width="14" height="14">
+      <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-menu-close"></use>
+    </svg>
+  </button>
+
+
+  <ul class="header-mobile-menu-list list">
+    <li class="header-mobile-menu-item">
+      <a class="header-mobile-menu-links" href="./index.html">home</a>
+    </li>
+    <li class="header-mobile-menu-item">
+      <a class="header-mobile-menu-links" href="./hotel.html">hotel</a>
+    </li>
+    <li class="header-mobile-menu-item">
+      <a class="header-mobile-menu-links active" href="./restaurant.html">restaurant</a>
+    </li>
+  </ul>
+  
+  <ul class="header-mobile-menu-social-list list">
+    <li class="header-social-list-item">
+      <a class="header-social-list-link" href="https://www.instagram.com" target="_blank">
+        <svg class="header-social-list-icon" width="20" height="20">
+          <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-instagram"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="header-social-list-item">
+      <a class="header-social-list-link" href="https://www.facebook.com/" target="_blank">
+        <svg class="header-social-list-icon" width="20" height="20">
+          <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-facebook"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="header-social-list-item">
+      <a class="header-social-list-link" href="https://twitter.com/" target="_blank">
+        <svg class="header-social-list-icon" width="20" height="20">
+          <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-twitter"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
+</div>
+</header>
+    
+<main>
+
+    <!-- Loads the specified .html file -->
+    <section class="section hero-section">
+  <div class="container hero">
+    <div class="hero-back">
+
+
+    </div>
+    <h1 class="hero-title-main">mimino</h1>
+    <div class="wrap-hero-ul">
+      <ul class="hero-btn-list">
+        <li class="list-item">
+          <button type="button" class="js-open-modal" data-modal="1">
+            book a room
+          </button>
+        </li>
+        <li class="list-item">
+          <button type="button" class="js-open-modal" data-modal="2">
+            book a table
+          </button>
+        </li>
+      </ul>
+      <div class="hero-text-wrap">
+        <ul class="hero-text-list">
+          <li class="list-item">
+            <p class="hero-text">
+              Whether you're in the mood for a hearty breakfast, a light lunch,
+              or
+              <span> a romantic dinner,</span> our menu has something for
+              everyone.
+            </p>
+          </li>
+          <li class="list-item">
+            <p class="hero-text">
+              At Hotel Mimino, <span>we believe</span> that great food should be
+              available to everyone, no matter the time of day.
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
+    <!--   HOTEL   -->
+
+<section class="main-about-section">
+  <div class="container">
+    
+    <div class="main-about-rest-hotel-wrapper">
+      <div class="main-about-photo">
+        <h2 class="section-title-invisible">About Us</h2>
+
+        <ul class="main-about-list">
+          <li class="main-about-item">
+            <div class="main-rest-hotel-review">
+              <picture>
+                <!-- Desktop screen  -->
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="/mimino-team-project/assets/home_room1_desktop-f101ab24.webp 1x, /mimino-team-project/assets/home_room1_desktop@2x-0cfa74e3.webp 2x"
+                  type="image/webp"
+                />
+
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="/mimino-team-project/assets/home_room1_desktop-dc1d6a17.jpg 1x, /mimino-team-project/assets/home_room1_desktop@2x-d4123a5e.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/mimino-team-project/assets/home_room1_tablet-c58520a3.webp 1x, /mimino-team-project/assets/home_room1_tablet@2x-a8d012c1.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/mimino-team-project/assets/home_room1_tablet-7272ecd0.jpg 1x, /mimino-team-project/assets/home_room1_tablet@2x-59b11877.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="/mimino-team-project/assets/home_room1_mobile-77904734.webp 1x, /mimino-team-project/assets/home_room1_mobile@2x-3bfe6a8a.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="/mimino-team-project/assets/home_room1_mobile-8825084d.jpg 1x, /mimino-team-project/assets/home_room1_mobile@2x-8bebe769.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class=""
+                  src="/mimino-team-project/assets/home_room1_mobile-8825084d.jpg"
+                  alt="photo of the first room"
+                  loading="lazy"
+                />
+              </picture>
+
+              <div class="main-review-wrapper">
+                <div class="main-review-img-wrapper">
+                  <img
+                    class="main-review-img"
+                    src="/mimino-team-project/assets/home_Maria_all-395004fd.png"
+                    alt="photo of Maria"
+                    srcset="/mimino-team-project/assets/home_Maria_all-395004fd.png 1x, /mimino-team-project/assets/home_Maria_all@2x-638ccecc.png 2x"
+                    width="41"
+                    height="41"
+                  />
+                </div>
+
+                <div class="main-review-text-wrapper">
+                  <h3 class="main-review-title">Maria</h3>
+                  <p class="main-review-text">
+                    <span class="main-review-text-gray">give rating </span>4.5
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="main-about-item">
+            <picture class="main-about-rest-hotel-img">
+              <!-- Desktop screen  -->
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_room2_desktop-9cb99752.webp 1x, /mimino-team-project/assets/home_room2_desktop@2x-c776b149.webp 2x"
+                type="image/webp"
+              />
+
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_room2_desktop-17d8d10d.png 1x, /mimino-team-project/assets/home_room2_desktop@2x-26201357.png 2x"
+                type="image/png"
+              />
+
+              <!-- Tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="/mimino-team-project/assets/home_room2_tablet-d729dc71.webp 1x, /mimino-team-project/assets/home_room2_tablet@2x-e089cc00.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/mimino-team-project/assets/home_room2_tablet-ef6ca3ab.png 1x, /mimino-team-project/assets/home_room2_tablet@2x-6b544aa3.png 2x"
+                type="image/png"
+              />
+              <!-- Mobile screen -->
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/home_room2_mobile-1c71fcc4.webp 1x, /mimino-team-project/assets/home_room2_mobile@2x-5431c302.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/home_room2_mobile-34b3dde7.png 1x, /mimino-team-project/assets/home_room2_mobile@2x-38af0ee9.png 2x"
+                type="image/png"
+              />
+              <img
+                class=""
+                src="./images/mobile/home/home_room2_mobile.jpg"
+                alt="photo of the second room"
+                loading="lazy"
+              />
+            </picture>
+          </li>
+        </ul>
+      </div>
+
+      
+
+      <div class="main-rest-hotel-wrapper">
+        <h3 class="main-rest-hotel-title">restaurant-hotel complex</h3>
+        <ul class="main-rest-hotel-list list">
+          <li class="main-rest-hotel-item">
+            <p class="main-rest-hotel-text">
+              Indulge in a taste of luxury with every bite at Hotel Mimino. From
+              the freshest seafood to the most succulent steaks, every dish is
+              crafted with care to ensure that you enjoy a truly memorable
+              dining experience.
+            </p>
+          </li>
+          <li class="main-rest-hotel-item">
+            <p class="main-rest-hotel-text">
+              Treat yourself to a taste of the good life and come dine with us
+              today!
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-about-buisness-hotel-wrapper">
+      <div class="main-buisness-hotel-review">
+        <picture>
+          <!-- Desktop screen  -->
+          <source
+            media="(min-width: 1440px)"
+            srcset="/mimino-team-project/assets/home_restaurant2_desktop-700a3c02.webp 1x, /mimino-team-project/assets/home_restaurant2_desktop@2x-5e5649ae.webp 2x"
+            type="image/webp"
+          />
+
+          <source
+            media="(min-width: 1440px)"
+            srcset="/mimino-team-project/assets/home_restaurant2_desktop-01baa9c5.jpg 1x, /mimino-team-project/assets/home_restaurant2_desktop@2x-3c70c23e.jpg 2x"
+            type="image/jpg"
+          />
+
+          <!-- Tablet screen -->
+          <source
+            media="(min-width: 768px)"
+            srcset="/mimino-team-project/assets/home_restaurant1_tablet-36a597ed.webp 1x, /mimino-team-project/assets/home_restaurant1_tablet@2x-22d99a40.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="/mimino-team-project/assets/home_restaurant1_tablet-bc2e529c.jpg 1x, /mimino-team-project/assets/home_restaurant1_tablet@2x-e79c81e2.jpg 2x"
+            type="image/jpg"
+          />
+          <!-- Mobile screen -->
+          <source
+            media="(max-width: 767px)"
+            srcset="/mimino-team-project/assets/home_restaurant1_mobile-7b635b9c.webp 1x, /mimino-team-project/assets/home_restaurant1_mobile@2x-7be6852f.webp 2x"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="/mimino-team-project/assets/home_restaurant1_mobile-d5571e60.jpg 1x, /mimino-team-project/assets/home_restaurant1_mobile@2x-329e3cfd.jpg 2x"
+            type="image/jpg"
+          />
+          <img
+            class=""
+            src="/mimino-team-project/assets/home_restaurant1_mobile-d5571e60.jpg"
+            alt="first photo of the restaurant"
+            loading="lazy"
+          />
+        </picture>
+
+        <div class="main-review-wrapper-sec">
+          <div class="main-review-img-wrapper">
+            <img
+              class="main-review-img"
+              src="data:image/png;base64,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"
+              alt="photo of Alexander"
+              srcset="data:image/png;base64,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 1x, /mimino-team-project/assets/home_Alexander_all@2x-c0fe2505.png 2x"
+              width="41"
+              height="41"
+            />
+          </div>
+
+          <div class="main-review-text-wrapper">
+            <h3 class="main-review-title">Alexander</h3>
+            <p class="main-review-text">
+              <span class="main-review-text-gray">give rating </span>5.5
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+
+      <div class="main-business-hotel-wrapper">
+        <div class="main-business-hotel-text-wrapper">
+          <h3 class="main-rest-hotel-title">business class hotel</h3>
+          <p class="main-business-hotel-text">
+            The Mimino hotel features spacious and stylish double luxury rooms
+            with modern amenities for a comfortable stay.
+          </p>
+        </div>
+
+        <div class="main-business-hotel-img-wrapper">
+          <picture>
+            <!-- Desktop screen  -->
+            <source
+              media="(min-width: 1440px)"
+              srcset="/mimino-team-project/assets/home_restaurant1_desktop-a0f17ce4.webp 1x, /mimino-team-project/assets/home_restaurant1_desktop@2x-79b88024.webp 2x"
+              type="image/webp"
+            />
+
+            <source
+              media="(min-width: 1440px)"
+              srcset="/mimino-team-project/assets/home_restaurant1_desktop-3199d744.jpg 1x, /mimino-team-project/assets/home_restaurant1_desktop@2x-cfd13865.jpg 2x"
+              type="image/jpg"
+            />
+
+            <!-- Tablet screen -->
+            <source
+              media="(min-width: 768px)"
+              srcset="/mimino-team-project/assets/home_restaurant2_tablet-9e07062e.webp 1x, /mimino-team-project/assets/home_restaurant2_tablet@2x-df13ce80.webp 2x"
+              type="image/webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="/mimino-team-project/assets/home_restaurant2_tablet-1c43a42b.jpg 1x, /mimino-team-project/assets/home_restaurant2_tablet@2x-79a4801c.jpg 2x"
+              type="image/jpg"
+            />
+            <!-- Mobile screen -->
+            <source
+              media="(max-width: 767px)"
+              srcset="/mimino-team-project/assets/home_restaurant2_mobile-7cfa44a5.webp 1x, /mimino-team-project/assets/home_restaurant2_mobile@2x-691f0851.webp 2x"
+              type="image/webp"
+            />
+            <source
+              media="(max-width: 767px)"
+              srcset="/mimino-team-project/assets/home_restaurant2_mobile-c4145f81.jpg 1x, /mimino-team-project/assets/home_restaurant2_mobile@2x-2447c92b.jpg 2x"
+              type="image/jpg"
+            />
+            <img
+              class=""
+              src="/mimino-team-project/assets/home_restaurant2_mobile-c4145f81.jpg"
+              alt="second photo of the restaurant"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="restaurant">
+        <div class="container restaurant-detail-cont">
+  
+          <div class="restaurant-description">
+            <h2 class="restaurant-title paragraph">Restaurant</h2>
+            <p class="restaurant-text paragraph">relax and unwind with our <br> delicious offerings, available any time of day.</p>
+          </div>  
+    
+
+
+<div class="rest-details-slider-wrapper">
+      <div class="variable-width">
+        <div class="item">
+          <picture>
+                <source media="(min-width: 1440px)" 
+                srcset="/mimino-team-project/assets/home_scrol_restaurant1_tablet-ef4a648a.jpg "
+                type="image/jpg">
+                <source media="(min-width: 768px)" 
+                srcset="/mimino-team-project/assets/home_scrol_restaurant1_tablet-db77a64c.jpg "
+                type="image/jpg">
+                <source media="(max-width: 767px)" 
+                srcset="/mimino-team-project/assets/home_scrol_restaurant1_tablet-937f2552.jpg "
+                type="image/jpg"> 
+                 <img class="rest-images" src="/mimino-team-project/assets/home_scrol_restaurant1_tablet-ef4a648a.jpg" alt="cocktail in a glass"/>
+                </picture>
+        </div>
+
+        <div class="item">
+
+          <picture>
+             <source media="(min-width: 1440px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant2_tablet-111f8570.jpg "
+             type="image/jpg">
+             <source media="(min-width: 768px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant2_tablet-a409c84a.jpg "
+             type="image/jpg">
+             <source media="(max-width: 767px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant2_tablet-99e6330e.jpg "
+             type="image/jpg"> 
+              <img class="rest-images" src="/mimino-team-project/assets/home_scrol_restaurant2_tablet-111f8570.jpg" alt="cocktail in a glass" />
+             </picture>
+
+         
+        </div>
+
+
+        <div class="item">
+
+          <picture>
+             <source media="(min-width: 1440px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant3_tablet-dfe67b0e.jpg "
+             type="image/jpg">
+             <source media="(min-width: 768px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant3_tablet-31b4054b.jpg "
+             type="image/jpg">
+             <source media="(max-width: 767px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant3_tablet-f7416916.jpg "
+             type="image/jpg"> 
+              <img class="rest-images" src="/mimino-team-project/assets/home_scrol_restaurant3_tablet-dfe67b0e.jpg" alt="cocktail in a glass" />
+             </picture>
+
+        </div>
+
+
+ <div class="item">
+
+          <picture>
+             <source media="(min-width: 1440px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant4_tablet-adacb4c8.jpg "
+             type="image/jpg">
+             <source media="(min-width: 768px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant4_tablet-ead415b3.jpg "
+             type="image/jpg">
+             <source media="(max-width: 767px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant4_tablet-9f86aabf.jpg "
+             type="image/jpg"> 
+              <img class="rest-images" src="/mimino-team-project/assets/home_scrol_restaurant4_tablet-adacb4c8.jpg" alt="cocktail in a glass" />
+             </picture> 
+
+        </div>
+
+         <div class="item">
+
+          <picture>
+             <source media="(min-width: 1440px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant5_tablet-1ce5f0d0.jpg "
+             type="image/jpg">
+             <source media="(min-width: 768px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant5_tablet-93d9174a.jpg "
+             type="image/jpg">
+             <source media="(max-width: 767px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant5_tablet-9aeb2771.jpg "
+             type="image/jpg"> 
+              <img class="rest-images" src="/mimino-team-project/assets/home_scrol_restaurant5_tablet-1ce5f0d0.jpg" alt="cocktail in a glass" />
+             </picture>
+
+        </div>
+
+         <div class="item">
+
+          <picture>
+             <source media="(min-width: 1440px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant6_tablet-ba89233f.jpg "
+             type="image/jpg">
+             <source media="(min-width: 768px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant6_tablet-1c83c40c.jpg "
+             type="image/jpg">
+             <source media="(max-width: 767px)" 
+             srcset="/mimino-team-project/assets/home_scrol_restaurant6_tablet-de19f173.jpg "
+             type="image/jpg">
+              <img class="rest-images" src="/mimino-team-project/assets/home_scrol_restaurant6_tablet-ba89233f.jpg" alt="cocktail in a glass" />
+             </picture> 
+
+        </div>
+
+      </div>
+
+
+</div>
+
+ <ul class="restaurant-btns">
+          <li class="restaurant-btn">
+        <button type="button" class="js-open-modal white" data-modal="2">
+          book a table
+        </button>
+      </li>
+      <li class="restaurant-btn">
+        <a href="./restaurant.html" class="restaurant-link">view a menu</a>
+      </li>
+          </ul>
+
+
+        </div> 
+      </section>
+    <section class="welcome">
+<div class="container">
+<div class="pic-text-wrap">
+    <div class="welcome-wrap">
+    <h2 class="welcome-title">
+    Welcome to the epitome of <span class="italic-w">luxury</span> and <span class="italic-w">comfort</span>
+</h2>
+<ul class="welcome-list">
+    <li class="welcome-text welcome-one">Our hotel rooms are elegantly designed with an eye for detail, ensuring that you have everything you need for a relaxing
+    and rejuvenating stay.
+    </li>
+    <li class="welcome-text welcome-two">Each room is equipped with the latest amenities, including plush bedding, high-speed Wi-Fi, flat-screen TVs, and a
+    coffee maker to help you start your day right. Our spacious bathrooms feature luxurious toiletries and towels, so you
+    can pamper yourself in complete privacy.
+    </li>
+</ul>
+</div>
+<div class="welcome-img">
+<picture class="welcome-pic">
+<!-- Desktop screen -->
+   <source
+    media="(min-width: 1200px)"
+    srcset="/mimino-team-project/assets/welcome_img_desktop-327f38b3.webp 1x, /mimino-team-project/assets/welcome_img_desktop@2x-e32a73e3.webp 2x"
+    type="image/webp" />
+  <source
+    media="(min-width: 1200px)"
+    srcset="/mimino-team-project/assets/welcome_img_desktop-66205d01.jpg 1x, /mimino-team-project/assets/welcome_img_desktop@2x-b4babcd3.jpg 2x"
+    type="image/jpg" />
+<!-- Tablet screen -->
+   <source 
+    media="(min-width: 768px)" 
+    srcset="/mimino-team-project/assets/home_welcome_tablet-5a286145.webp 1x, /mimino-team-project/assets/home_welcome_tablet@2x-ae320990.webp 2x"
+    type="image/webp" />
+   <source 
+    media="(min-width: 768px)" 
+    srcset="/mimino-team-project/assets/home_welcome_tablet-7e2cca15.jpg 1x, /mimino-team-project/assets/home_welcome_tablet@2x-fc0638df.jpg 2x"
+    type="image/jpg" />
+<!-- Mobile screen -->
+   <source 
+    media="(max-width: 767px)" 
+    srcset="/mimino-team-project/assets/home_welcome_mobile-12dfe884.webp 1x, /mimino-team-project/assets/home_welcome_mobile@2x-5b30ad39.webp 2x"
+    type="image/webp" />
+   <source 
+    media="(max-width: 767px)"
+    srcset="/mimino-team-project/assets/home_welcome_mobile-437b228c.jpg 1x, /mimino-team-project/assets/home_welcome_mobile@2x-3004eb2a.jpg 2x"
+    type="image/jpg" />
+   <img class="welcome-img" 
+   src="/mimino-team-project/assets/home_welcome_mobile-437b228c.jpg" 
+   alt="welcome" 
+   width="704" 
+   height="599"
+   loading="lazy" />
+</picture>
+</div>
+</div>
+</div>
+</section>
+    <section class="hotel-section">
+  <div class="hotel-conteiner">
+    <!-- Hotel text -->
+    <div class="hotel-wrapper">
+      <h2 class="hotel-title">Hotel</h2>
+      <p class="hotel-text">
+        Book your stay with us now and experience the epitome of comfort and
+        luxury at our hotel. We guarantee you'll be thrilled with your decision.
+      </p>
+    </div>
+    <!-- Hotel slider -->
+    <div class="img-slider">
+      <div class="img-item_first">
+        <div class="hotel-detail-slider-wrapper">
+          <div class="hotel-detail-slider-img">
+            <picture>
+              <!-- Desktop screen -->
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel4_desktop-32c975ab.webp 1x, /mimino-team-project/assets/home_hotel4_desktop@2x-185eac8b.webp 2x"
+                type="image/webp"
+              />
+
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel4_desktop-16463b78.jpg 1x, /mimino-team-project/assets/home_hotel4_desktop@2x-9edfe4e6.jpg 2x"
+                type="image/jpg"
+              />
+              <!-- Tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="data:image/webp;base64,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 1x, /mimino-team-project/assets/home_room6_tablet@2x-78cc86aa.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/mimino-team-project/assets/home_room6_tablet-0ad6bc65.jpg 1x, /mimino-team-project/assets/home_room6_tablet@2x-9e95f1aa.jpg 2x"
+                type="image/jpg"
+              />
+
+              <!-- Mobile screen -->
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-4-335-3332f24c.webp 1x, /mimino-team-project/assets/image-4-335@2x-8c7c2859.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-4-335-b6dd8c15.jpg 1x, /mimino-team-project/assets/image-4-335@2x-1d015377.jpg 2x"
+                type="image/jpg"
+              />
+              <img
+                class="hotel-img img-first"
+                src="/mimino-team-project/assets/image-4-335-b6dd8c15.jpg"
+                alt="shells"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <div class="hotel-detail-slider-wrapper">
+          <div class="hotel-detail-slider-img">
+            <picture>
+              <!-- Desktop screen -->
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel5_desktop-aae7708b.webp 1x, /mimino-team-project/assets/home_hotel5_desktop@2x-5dbaf1dd.webp 2x"
+                type="image/webp"
+              />
+
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel5_desktop-b9a90b65.jpg 1x, /mimino-team-project/assets/home_hotel5_desktop@2x-cdff31a7.jpg 2x"
+                type="image/jpg"
+              />
+              <!-- Tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="data:image/webp;base64,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 1x, /mimino-team-project/assets/home_room7_tablet@2x-fc95280c.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/mimino-team-project/assets/home_room7_tablet-386abb66.jpg 1x, /mimino-team-project/assets/home_room7_tablet@2x-ef0a3611.jpg 2x"
+                type="image/jpg"
+              />
+
+              <!-- Mobile screen -->
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-5-335-ad48e8fc.webp 1x, /mimino-team-project/assets/image-5-335@2x-e8697f7a.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-5-335-dc363bc1.jpg 1x, /mimino-team-project/assets/image-5-335@2x-53131e2d.jpg 2x"
+                type="image/jpg"
+              />
+              <img
+                class="hotel-img img-second"
+                src="/mimino-team-project/assets/image-5-335-dc363bc1.jpg"
+                alt="care products"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-item_second">
+        <div class="hotel-detail-slider-wrapper">
+          <div class="hotel-detail-slider-img">
+            <picture>
+              <!-- Desktop screen -->
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel3_desktop-8e1260ff.webp 1x, /mimino-team-project/assets/home_hotel3_desktop@2x-9e58b018.webp 2x"
+                type="image/webp"
+              />
+
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel3_desktop-c4b86a38.jpg 1x, /mimino-team-project/assets/home_hotel3_desktop@2x-6230007e.jpg 2x"
+                type="image/jpg"
+              />
+
+              <!-- Tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="/mimino-team-project/assets/home_room5_tablet-a49ccd5e.webp 1x, /mimino-team-project/assets/home_room5_tablet@2x-85f485ad.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/mimino-team-project/assets/home_room5_tablet-105c8039.jpg 1x, /mimino-team-project/assets/home_room5_tablet@2x-f96c30fa.jpg 2x"
+                type="image/jpg"
+              />
+
+              <!-- Mobile screen -->
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-1-335-e536a4c3.webp 1x, /mimino-team-project/assets/image-1-335@2x-0924ba30.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-1-335-6f86bfbf.jpg 1x, /mimino-team-project/assets/image-1-335@2x-8cf09636.jpg 2x"
+                type="image/jpg"
+              />
+              <img
+                class="hotel-img"
+                src="/mimino-team-project/assets/image-1-335-6f86bfbf.jpg"
+                alt="hotel room"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <div class="img-item_third">
+        <div class="hotel-detail-slider-wrapper">
+          <div class="hotel-detail-slider-img">
+            <picture>
+              <!-- Desktop screen -->
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel1_desktop-5a4ba09e.webp 1x, /mimino-team-project/assets/home_hotel1_desktop@2x-bf7f9c72.webp 2x"
+                type="image/webp"
+              />
+
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel1_desktop-38e1b523.jpg 1x, /mimino-team-project/assets/home_hotel1_desktop@2x-2af00439.jpg 2x"
+                type="image/jpg"
+              />
+              <!-- Tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="data:image/webp;base64,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 1x, /mimino-team-project/assets/home_room3_tablet@2x-d32e28d2.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACPALADASIAAhEBAxEB/8QAHAAAAQUBAQEAAAAAAAAAAAAAAgEDBAUGBwAI/8QAPhAAAQMCAwQGCAQDCQAAAAAAAQACAwQRBRIhBjFBYRMUIlFxcgcjJCVCgZGxMqHB0RU0UhYzYmNzgqKy4f/EABkBAAIDAQAAAAAAAAAAAAAAAAECAAMEBf/EACERAAMBAAEEAwEBAAAAAAAAAAABAhEDEiExQRMyUSIE/9oADAMBAAIRAxEAPwDkgWjwB3Rwh4+GUFZuM3YFocCN4CP8wKqvBdJ0o1MlcIy78IAU2CKwCj0UPqI9OCtIo7BUNlqXsKNlgn2hCBZGEo4QTo3JoJ4bkCAOQ3SvKauhowZKG6S6RQgYKMIGpwIgDCUheaismABZCQnLISNFADdkLgnCgIUINkISDdOEL1lCHzfGLNstDgP907zj9FQNG/xV/gJ9W7zhaK8FE+TrlEz2aPyhTWiyj0Q9ki8qkrMaBUQQIggEcangNE03enhuUIMyBNcU9ImTvSjCpF7gvXU0gYTgTTSnWlFCsdaiQNRp0KIkKJIjgACEJCcsksgEbyoSE6QhcNCoQ+brWc7xV3gX4H+cKmeLSO8Vc4JoyTzBaK8FM+TslD/JxeUKSo1B/JReVSVlNAiIIUQUIOtRyydFA+TI5+RpdlYLk24DmgaU7fRQhjq3bSakpzVz4FXQ0jTYyTANI+Wqew3aymxSSnbHS1TRUAujeWXaQDYm/j3pv0hSsbslWtc9oc4AAE6nVUexb4I6HAz0jMxgnDu1ud0h0PO33TqU4dCOmrUm/B0Ueu62aKXqJhFVl9WZgSy/O2q8aqBu+aMf7ggdiNG38VVCPGQKpFrOf47tPtPs5WwQ1ktLJ0rcwMTRl/MXW22fxLEq2arjro6YNgfkEkJd2j4H91zj0kYlR1+KUbKWdsr4WkPy3sNTx4rY4Nj2HULquWsqW07Kl4mic/cWkG2o3bloc/wnnczqv7zextmlOXWQqNu8AjIDMVhI4loLvsEA9JWzcO+tkkHENhef0SKX+Dul+mz1tfgkVR/bvZ2ppmM64Kd4P4Zo3M+4UuDF8OqQDDXU8nlkBRwGomJEIlY4Xa9p8ClugE8UDkabkNmkoBPnquh6KoI79VOwY2ZJ4hMYrrUg8keFuytk8Qr/AEVezs+HO9gh8qlZlV4bL7vh8ql9KFmLyRmShyiGYJOmQ0OE9r06X9lVzZx3qBje0EOD0fSOaZJXaMjHH/xDyEwvpJl6XH4Yn9qMQizTuBJK9I2ki2MpI433HWXOIA0uY23/ADCoNqcVmx+tbIGBj2C3Y3KDAyudRNo5amfqrZDL0bTYZiLE/QLVNTMpNlD4eS6blFbJPI6R15HkX3FxTTnE7ynq6m6s8Fjs0bhcE70/htPBI101UxxjaCRrYFXqlmozOKT6WTaaQCnZmdZ2/UrTYjd2Asc64b1LQnmJLLCTB1XNeJmSMaNDSTopbGvyOE7JZo42C+d7iGtGnyGqR5oyTzSsDj3r2Y3GqfrKJ8F5GAmE9+8eKiB2qtT0raw6DM/OSb79UwGsL9QD8k10xcxvMLwk7QVQ5PZNLBYwzys8rytLsridbJijYpal8kZadHarHvms0K82TnvjbR/hKWksHlvTqAkQyP7JUXpkLptCsxpOHYi7NOPBLQuytk+SarDeQHklpXWY/wCS0eik6thk/u6HX4VKM/NUWGz+74tfhUrpj3rI/JpSLAz80PWCoHSIhIho2E9kxJ3rL7TSmSrmY7cIm25byrxkmqo8afC2smdK6xMQsA3MbWPepL7hzDD0hsL8SVe4XjbsMbUTMgike+F8QL79jMLZhbjYquigp5abpIpozqbloILfM3u5hQpXujikjcLOBsQjU9VGyLSjGVVXMS42Ois6x19maZw0t2bDuuVSzm9jzWjlZDBszB07w1xuQMgeTvtv0Av+62pYkcfkp1TbKNkroog5htZql02L1VNQzxs6MtqB288Ycd/AncnurUtTTOdFLG7do0ZZBu+HcfAKtmiMDWsuHAi7XDc4d6ZY2VvUtLWsqQcEoIxGxt6ZxcQNXHM4a/QLPAq2qXe7aEd1O8f8nKoCaSujWxyEws8B9kWeyjRO9UzwCJztUAjz5tLK32TqLY6zylZuSSystlZSMcab/CUt/VjR9kda6xzQOqOaq+sHvQuqD3rGbcOXzm5BXotGuQPN2gpWHQrSZzeYY/2CLwUvOqzDX+wR+Cl51jp9zZK7EjpEQfdRg5ONckGJUbtVV4vRMmdV1Ly60cB0Btc20/VTmPVPitf0VTUU7wOjkh369xCaN0jKz+FNwmmbXQCcDpGxlj3AiZrm3IFhp3aqoxWmkpzlliMTxdpaTc2Go146ED5KwfiUldR1MFLTtAe1rppMxNgy1t9rbgqite7omse4ueBd9zc3PD6WVy3e4fElJMNB4rWvws1ezramV72RtjkkIOrrsOUN+g/JZKbcPFauDEsmy7KSVrho4OLngXJzG+vJy01uLDnvOp6R48EbHhza6nqKhkjKXrIe6PsC3w5r6HTRQsQPWKbrDad8LHASDM2zSdz8vK5arCPGI6WjhYGyyu6r1YRB7SxxPEgE96pHzTihMcz3kN9Wxjvh1ubfQfVCd3uLWZiHake7KL/Rf/2KqArusYRg+HuIGsL7fUqkCuRUzSRH1TPKErigiPq2eUJXFKEYlKsNmD75b5Sq2VT9mjbGB5Slv6saPsjoOdeLkyH6JcyxHQw538DV4aJA4FgSX1Woymyw0+wx+CmAocCopKyiiZBG6V1tzRey1lFsVUSkOq5Gws4tGrv2WJ96ZsTSSMw0FxsASeSlxYfWyjsUkzuYYV0nD8Jo8MhyU8Yvxe7Vx+am6cAj0i9ZzNmCYpoepS2UKq2PxuurnuFHGITGADM8Wv8AI3XWC3XVKBxKi7dybpyIejXHBTZGT0EetwxuYNv37tT4rB4/guIbP1BpcRhLJH9prgbh47wV9NcNAoNXhNHXTwzVVNHM+El0Re2+QnuUnlafdB9YfMMOBYvXBopcMq5b/wBELiPrZahuyGP1OFRwVGC1OZnFjmh2/md37rv7YQBawsvGMAaBWP8A0V6RT8E+2cBg2JxyAA0+C1DZQLB8r2EjmBewPP7qBW7DbVEZ3YRMWgbmva4/e5K+iyxreATD5WN4IL/RSe4T4Jaw+b8Wp56bB6CGpgkhljY9rmSNLSNeazYX07ikNFiUDoKymimjItZ7QVxfbnZGDBHNrcPzCkkdldGTfIeFj3LRw86p41hRy8DlairjPq2eUJXFBG71bfALznK4pGZFN2fOXFh4FQJHKVgLverfApb+rG4/ujdtfdHmUZhTt1gbOlhIpvRFJlHWMWse6OK/3Kv8L9F+C0UrZKjpqxw4Su7N/AfqtdHK/MMzCByT75y1l2sJPFWPkp+yhQl6PUtDDRwiKmhZFGNzY2ho/JSACkwyoNTcOFiOCfqC1jy0b0j8ahveMaARAJp0paNQlbUNO9Kxh7Qbl4C6ESMKQyAcVCDmiEkJh0yZdITxUwmkl0rRxTL6kcFGcSU042UwmjktQe9QpZ+aSaQAKtqatsYJJAQbGSHJ5xY6rnXpDxWJuF9SzAyyvBDe4DitW+rNW/JE7Q8RwXLttcMbT437PJNO57c0mY5rFW8CTvuV87ah4Q475G+AXnabymWQVsgAALRbjopEWFFxvPI48gtjqV7MUxT9EOSRmvav4Kbs+ySXFWZGki2pU2Kgo4repLj3uKssOfHDVDo2W04Km+b+WkjRx8OUm2XbYJB8KLo3/wBJSisPcl66f6Vh2vw35P6dNbWQE9iZvzTwq221LSORVYWh29jfogdC0i2QW5FT5Sr4y4pqlsMrpGkapmHFGvxR4lIAduVX1cG5u4eBVTVYY2efM2aRrwbggpPmQy4tNtUuDm3YoYcR3hVdLLXQQhsjxJbiU47EJWu7TBZN8k0D43JYmRw3FJ07u9VjsTbfViE4lGeBR1Exlk6V3AoopST2lUHEWg8foibiDb8foimBou3uFlCmmDQVH/iMdtSfoqrEay4LmuNkXQFI9VVJNwHAc1Q12JU1MCZXGR3cFGnklnJ7RAUUUAc651PNLq9j9LBqcaqG0L5aeBkVzYE71nHZ6hznTXc8m+Y71rWUcP4JGg3VRiNJHT1GSI2aRchWRaEqSuEDBvF0WQAaBSuj0SFgVnUJhCc3knKJvtPyTjmBHRt9f8lG+xEu5OC8SjIQEKotP//Z 1x, /mimino-team-project/assets/home_room3_tablet@2x-fcdbaff6.jpg 2x"
+                type="image/jpg"
+              />
+
+              <!-- Mobile screen -->
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-2-335-981aa7c5.webp 1x, /mimino-team-project/assets/image-2-335@2x-57d1e764.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-2-335-1669f151.jpg 1x, /mimino-team-project/assets/image-2-335@2x-cec99504.jpg 2x"
+                type="image/jpg"
+              />
+              <img
+                class="hotel-img img-second"
+                src="/mimino-team-project/assets/image-2-335-1669f151.jpg"
+                alt="hygiene products"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+
+        <div class="hotel-detail-slider-wrapper">
+          <div class="hotel-detail-slider-img">
+            <picture>
+              <!-- Desktop screen -->
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel2_desktop-004900c8.webp 1x, /mimino-team-project/assets/home_hotel2_desktop@2x-e38d696a.webp 2x"
+                type="image/webp"
+              />
+
+              <source
+                media="(min-width: 1440px)"
+                srcset="/mimino-team-project/assets/home_hotel2_desktop-bbbad7e3.jpg 1x, /mimino-team-project/assets/home_hotel2_desktop@2x-7caaf666.jpg 2x"
+                type="image/jpg"
+              />
+
+              <!-- Tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="/mimino-team-project/assets/home_room4_tablet-5b4fa692.webp 1x, /mimino-team-project/assets/home_room4_tablet@2x-b45a6072.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="/mimino-team-project/assets/home_room4_tablet-32182dd1.jpg 1x, /mimino-team-project/assets/home_room4_tablet@2x-2acd0ef8.jpg 2x"
+                type="image/jpg"
+              />
+
+              <!-- Mobile screen -->
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-3-335-13ccc9e0.webp 1x, /mimino-team-project/assets/image-3-335@2x-863331c7.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="/mimino-team-project/assets/image-3-335-5325da62.jpg 1x, /mimino-team-project/assets/image-3-335@2x-97a5c2f9.jpg 2x"
+                type="image/jpg"
+              />
+              <img
+                class="hotel-img img-first"
+                src="/mimino-team-project/assets/image-3-335-5325da62.jpg"
+                alt="bathroom"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+        </div>
+      </div>
+
+      <!-- switches -->
+      <div class="slider-switches">
+        <button class="switch-btn" type="button">
+          <svg width="15" height="15">
+            <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-slide-left"></use>
+          </svg>
+        </button>
+
+        <button class="switch-btn" type="button">
+          <svg width="15" height="15">
+            <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-slide-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Hotel buttons  -->
+    <div class="hotel-buttons">
+      <button type="button" class="js-open-modal" data-modal="1">
+        Book a room
+      </button>
+
+      <a class="hotel-btn hotel-btn_link" href="./hotel.html">View room</a>
+    </div>
+  </div>
+</section>
+
+    <section class="loc-section">
+  <div class="container loc-container">
+    <h2 class="loc-title">location</h2>
+
+    <iframe 
+      class="map"
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2585.880843670534!2d34.525660019851735!3d49.599996442964304!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d82601f34ac947%3A0xbb948724f7cf0b61!2z0JPQvtGC0LXQu9GM0L3Qvi3RgNC10YHRgtC-0YDQsNC90L3QuNC5INC60L7QvNC_0LvQtdC60YEgItCc0ZbQvNGW0L3QviI!5e0!3m2!1sru!2sua!4v1677852490879!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <address class="loc-adr">
+      <p class="loc-txt">Ukraine, Poltava, <br> St. Marshal Biryuzov, 15</p>
+      <div class="loc-adr-wrapper">
+        <p class="loc-call-txt">call us:</p>
+        <ul class="loc-list">
+          <li class="loc-item"><a class="loc-link" href="tel:0955559533">(095) 555 95 33</a></li>
+          <li class="loc-item"><a class="loc-link" href="tel:0668491089">(066) 849 10 89</a></li>
+        </ul>
+      </div>
+    </address>
+  </div>
+</section>
 
     
+</main>
+
+
+<footer class="footer">
+  <div class="container div-footer">
+    <div class="footer-menu">
+      <ul class="footer-list-menu">
+        <li class="footer-item">
+          <a class="ft-menu-link" href="./index.html">HOME</a>
+        </li>
+        <li class="footer-item">
+          <a class="ft-menu-link" href="./hotel.html">HOTEL</a>
+        </li>
+        <li class="footer-item">
+          <a class="ft-menu-link" href="./restaurant.html">RESTAURANT</a>
+       </li>
+      </ul>
+    </div>
+    <div class="div-footer-logo">
+     <a class="footer-logo" href="./index.html">MIMINO</a>
+     <p class="footer-text">restaurant-hotel complex</p>
+    </div>
+    <div class="footer-div-soc">
+      <ul class="footer-list">
+       <li>
+         <a href="https://www.instagram.com/" aria-label="instagram" target="_blank" rel="noopener noreferrer" >
+           <svg class="footer-svg" width="20" height="20" >
+             <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-instagram"></use>
+           </svg>
+          </a>
+       </li>
+       <li>
+         <a href="https://uk-ua.facebook.com/" aria-label="facebook" target="_blank" rel="noopener noreferrer" >
+           <svg class="footer-svg" width="20" height="20">
+             <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-facebook"></use>
+           </svg>
+          </a>
+       </li>
+       <li>
+         <a href="https://twitter.com/?lang=uk"  aria-label="twitter" target="_blank" rel="noopener noreferrer" >
+           <svg class="footer-svg" width="20" height="20">
+             <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-twitter"></use>
+           </svg>
+         </a>
+       </li>
+      </ul>
+   </div>
+  </div>
+</footer>
+
+<div class="modal" data-modal="1">
+  <div class="modal-book-room">
+    <h2 class="modal-title">book <span>a room</span></h2>
+    <button type="button" class="modal__cross js-modal-close">
+      <svg class="close-modal-icon" width="12" height="12">
+        <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-menu-close"></use>
+      </svg>
+    </button>
+    <form class="form-book-room" name="form_book_room">
+      <div class="book-room-name-tel-wrapper"> 
+      <div class="form-field">
+
+        <label for="user-name" class="form-field-label">
+          <input
+              minlength="2"
+              placeholder="Your name"
+              type="text"
+              class="form-input"
+              name="user-name"
+              id="user-name"
+              pattern="[a-zA-Zа-яА-я]{2,20}"
+            title="Username should only contain lowercase letters"
+            required
+            />
+          <span class="booking-label">Your name</span>
+        </label>
+        <p class="form-paragraph">who should book a room for?</p>
+      </div>
+      <div class="form-field">
+        <label for="user-phone" class="form-field-label"
+          ><input
+            placeholder="+38(099)-999-99-99"
+            type="tel"
+            class="form-input"
+            name="user-phone"
+            id="user-phone"
+            pattern="[0-9]{12}"
+            required
+          /><span class="booking-label">+ 38 ()</span>
+        </label>
+        <p class="form-paragraph">phone number</p>
+      </div></div>
+
+      <div class="book-chek-in-date-wrapper"> 
+      <div class="form-field select">
+    
+        <select name="date-first" id="date-first" class="modal-select">
+          <option value="">today</option>
+          <option value="">tomorrow</option>
+          <option value="">day after tomorrow</option>
+        </select>
+        <p class="form-paragraph">check-in-date</p>
+        
+      </div>
+
+      <div class="form-field select">
+              
+
+        <select name="date-second" id="date-second" class="modal-select">
+          <option value="">25/04/2023</option>
+          <option value="">26/04/2023</option>
+          <option value="">27/04/2023</option>
+          <option value="">28/04/2023</option>
+          <option value="">29/04/2023</option>
+          <option value="">30/04/2023</option>
+        </select> 
+        <p class="form-paragraph">check-in-date</p>
+      </div> </div> 
+
+      <div class="form-field select nubmer">
+             
+        <select name="room" id="room" class="modal-select">
+          <option value="">double suite</option>
+          <option value="">triple suite</option>
+          <option value="">four -seater suite</option>
+        </select>
+        <p class="form-paragraph">number category</p>
+      </div>
+      <button type="submit" class="modal-submit-btn">MAKE A RESERVATION</button>
+    </form>
+  </div>
+</div>
+
+<div class="overlay js-overlay-modal"></div>
+
+<div class="modal" data-modal="2">
+  <div class="modal-book-table">
+    <h2 class="modal-title">book <span>a table</span></h2>
+    <button type="button" class="modal__cross js-modal-close">
+      <svg class="close-modal-icon" width="12" height="12">
+        <use href="/mimino-team-project/assets/icons-c213c9dd.svg#icon-menu-close"></use>
+      </svg>
+    </button>
+    <form class="form-book-room" name="form_book_room">
+      <div class="book-table-name-tel-wrapper">
+        <div class="form-field">
+          <label for="user-name" class="form-field-label">
+            <input
+              minlength="2"
+              placeholder="Your name"
+              type="text"
+              class="form-input"
+              name="user-name"
+              id="user-name"
+               pattern="[a-zA-Zа-яА-я]{2,20}"
+            title="Username should only contain lowercase letters"
+            required
+            />
+            <span class="booking-label">Your name</span>
+          </label>
+          <p class="form-paragraph">who should book a table for?</p>
+        </div>
+
+        <div class="form-field select">
+        
+
+          <select
+            name="number-of-people"
+            id="number-of-people"
+            class="modal-select"
+            required
+          >
+            <option value="">number of people</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+          </select>
+          <p class="form-paragraph">number of people</p>
+
+          <!-- <label for="user-name" class="form-field-label">
+          <input
+            minlength="2"
+            placeholder="1-6 person"
+            type="text"
+            class="form-input"
+            name="user-name"
+            id="user-name"
+            pattern=""
+          />
+    
+          <span class="booking-label">number of people</span>
+        </label>  -->
+
+          <!--
+<label for="user-name" class="form-field-label">
+          <input type="number" name="age" value="0" min="18" max="120" />
+          <span class="booking-label">number of people</span>
+        </label> -->
+
+          <!-- 
+        <label for="fav" class="form-field-label">number of people </label>
+        <input list="nmb_of_people" name="fav" id="fav" class="form-input datalist"/>
+        <datalist id="nmb_of_people" class="datalist" >
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </datalist> -->
+        </div>
+      </div>
+
+      <div class="table-chek-in-date-wrapper">
+        <div class="form-field select">
+          
+          <select name="date-first" id="date-first" class="modal-select">
+            <option value="">today</option>
+            <option value="">tomorrow</option>
+            <option value="">day after tomorrow</option>
+          </select>
+          <p class="form-paragraph">check-in-date</p>
+        </div>
+
+        <div class="form-field">
+          <label for="user-phone" class="form-field-label"
+            ><input
+              placeholder="+38(099)-999-99-99"
+              type="tel"
+              class="form-input"
+              name="user-phone"
+              id="user-phone"
+              pattern="[0-9]{12}"
+              required
+            /><span class="booking-label">+ 38 ()</span>
+          </label>
+          <p class="form-paragraph">phone number</p>
+        </div>
+      </div>
+      <button type="submit" class="modal-submit-btn">MAKE A RESERVATION</button>
+    </form>
+  </div>
+</div>
+
+
+<script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.7/dist/jquery.inputmask.min.js"></script>
+    <script src="./js/input-mask.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    
+
+
+
   </body>
 </html>
