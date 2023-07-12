@@ -1,0 +1,125 @@
+.welcome {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #F6F6F6;
+}
+
+/* 768px <= tab <= infinity */
+@media screen and (min-width: 768px) {
+    .welcome {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+}
+
+/* 1200px <= desk <= infinity */
+@media screen and (min-width: 1440px) {
+    .welcome {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+}
+
+/* 1200px <= desk <= infinity */
+@media screen and (min-width: 1440px) {
+    .welcome-wrap {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+}
+
+/* 1200px <= desk <= infinity */
+@media screen and (min-width: 1440px) {
+    .pic-text-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 32px;
+    }
+}
+
+.welcome-title {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    width: 335px;
+    margin-bottom: 32px;
+    color: #000000;
+}
+
+/* 768px <= tab <= infinity */
+@media screen and (min-width: 768px) {
+  .welcome-title {
+    font-size: 36px;
+    width: 434px;
+}
+}
+
+.italic-w {
+    font-style: italic;
+}
+
+.welcome-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 32px;
+    color: #000000;
+}
+
+/* 768px <= tab <= infinity */
+@media screen and (min-width: 768px) {
+   .welcome-list {
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+}
+
+/* 1200px <= desk <= infinity */
+@media screen and (min-width: 1440px) {
+    .welcome-list {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 0;
+}
+}
+
+.welcome-text {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.welcome-one {
+    width: 310px;
+}
+
+/* 1200px <= desk <= infinity */
+@media screen and (min-width: 1440px) {
+   .welcome-one {
+    width: 437px;
+}
+}
+
+.welcome-two {
+    width: 335px;
+}
+
+/* 768px <= tab <= infinity */
+@media screen and (min-width: 768px) {
+   .welcome-two {
+    width: 366px;
+}
+}
+
+/* 1200px <= desk <= infinity */
+@media screen and (min-width: 1440px) {
+    .welcome-two {
+    width: 437px;
+}
+}

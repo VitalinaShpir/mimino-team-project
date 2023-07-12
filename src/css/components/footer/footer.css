@@ -1,0 +1,132 @@
+.footer {
+    padding-top: 64px;
+    margin-bottom: 32px;
+    background-color: var(--main-light-color);
+    border-bottom: 0.5px solid rgba(18, 18, 18, 0.3);
+}
+@media screen and (min-width: 768px) {
+    .footer{
+        padding-top: 80px;
+        margin-bottom: 48px;
+    }
+}
+@media screen and (min-width: 1440px){
+    .footer{
+        padding-top: 100px;
+        margin-bottom: 80px;
+    }
+}
+.div-footer{
+   display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   padding: 24px 22px 32px 20px;
+   
+}
+@media screen and (min-width:768px){
+    .div-footer{
+        padding: 32px; 
+    }
+}
+@media screen and (min-width: 1440px){
+    .div-footer{
+        padding: 32px 44px 80px 32px;
+    }
+}
+.footer-menu {
+    display: none;
+}
+@media screen and (min-width: 1440px){
+    .footer-menu {
+        margin-right: 370px;
+        display: flex;
+    }
+}
+.footer-list-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    margin: 0;
+    gap: 32px;
+}
+.footer-item{
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-item:hover,
+.footer-item:focus{
+  transform: translateY(-5px);  
+}
+.ft-menu-link {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    
+    color: #121212;
+}
+@media screen and (min-width: 1440px){
+    .div-footer-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 3px;
+    }
+}
+.footer-logo {  
+    padding: 0;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    margin-bottom: 3px;
+    
+    color: #121212;
+}
+.footer-text {
+    margin: 0;
+
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 10px;
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+    color: #121212;
+}
+.footer-div-soc {
+    margin-left: auto;
+}
+.footer-list {
+    display: flex;
+   flex-direction: row;
+   align-items: flex-start;
+   margin: 0px;
+   gap: 14px;
+}
+@media screen and (min-width:768px){
+    .footer-list{
+        gap: 16px;
+    }
+}
+.footer-svg {
+    fill: #f7f7f7;
+    stroke: #121212;
+}
+@media screen and (min-width: 768px){
+    .footer-svg{
+        min-width: 24px;
+        min-height: 24px;
+    }
+}

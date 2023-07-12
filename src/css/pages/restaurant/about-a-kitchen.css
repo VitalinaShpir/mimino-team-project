@@ -1,0 +1,128 @@
+.about-about-kitchen {
+  background-color: #f7f7f7;
+  padding-bottom: 64px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .about-about-kitchen {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-about-kitchen  {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.about-section-wrap {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+.about-kitchen-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-kitchen-gallery {
+    flex-direction: row-reverse;
+    gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-kitchen-gallery {
+    flex-direction: row;
+  }
+}
+
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-wrapper {
+    gap: 16px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-wrapper {
+    gap: 32px;
+    flex-direction: row;
+  }
+}
+
+.about-list-txt-kitchen {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  margin-top: 32px;
+  color: #000000;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+@media screen and (min-width: 768px) {
+  .about-list-txt-kitchen {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 32px;
+
+    margin-top: 32px;
+
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: -0.02em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-list-txt-kitchen {
+    position: absolute;
+    left: 543px;
+    top: 389px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-first-txt {
+    max-width: 334px;
+    max-height: 144px;
+  }
+  .about-second-txt {
+    max-width: 453px;
+    max-height: 120px;
+  }
+}
+
+.about-italic {
+  font-style: italic;
+}
+
+/* modal styles */
